@@ -23,7 +23,7 @@ import {
   Center,
   Spinner,
 } from '@chakra-ui/react'
-import { CopyIcon, ViewIcon } from '@chakra-ui/icons'
+import { CopyIcon } from '@chakra-ui/icons'
 import { createWallet } from 'nwc-enclaved-utils'
 import { nwc } from '@getalby/sdk'
 import { QRCodeSVG } from 'qrcode.react'
