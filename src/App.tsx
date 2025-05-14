@@ -28,6 +28,22 @@ import { createWallet } from 'nwc-enclaved-utils'
 import { nwc } from '@getalby/sdk'
 import { QRCodeSVG } from 'qrcode.react'
 
+// Custom QR code icon component
+const QrCodeIcon = (props: any) => (
+  <svg
+    stroke="currentColor"
+    fill="currentColor"
+    strokeWidth="0"
+    viewBox="0 0 24 24"
+    height="1em"
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path d="M3 11h8V3H3v8zm2-6h4v4H5V5zM3 21h8v-8H3v8zm2-6h4v4H5v-4zM13 3v8h8V3h-8zm6 6h-4V5h4v4zM13 13h2v2h-2zM15 15h2v2h-2zM13 17h2v2h-2zM17 13h2v2h-2zM19 15h2v2h-2zM17 17h2v2h-2zM19 19h2v2h-2zM15 19h2v2h-2zM13 21h2v2h-2zM21 13h2v2h-2zM21 21h2v2h-2zM21 17h2v2h-2z"/>
+  </svg>
+)
+
 function App() {
   const [nwcString, setNwcString] = useState('')
   const [lnAddress, setLnAddress] = useState('')
@@ -130,12 +146,6 @@ function App() {
       const response = await client.makeInvoice({ amount: 10000 }) // 10000 millisats = 10 sats
       setInvoice(response.invoice)
       setPaymentHash(response.payment_hash)
-      toast({
-        title: 'Invoice generated',
-        status: 'success',
-        duration: 3000,
-        isClosable: true,
-      })
     } catch (error) {
       console.error('Error generating invoice:', error)
       toast({
@@ -269,7 +279,7 @@ function App() {
                         onClick={() => handleShowQR(nwcString, 'NWC Connection String')}
                         _focus={{ boxShadow: 'none' }}
                       >
-                        <ViewIcon />
+                        <QrCodeIcon />
                       </Button>
                     </ButtonGroup>
                   </InputRightAddon>
@@ -300,7 +310,7 @@ function App() {
                         onClick={() => handleShowQR(lnAddress, 'Lightning Address')}
                         _focus={{ boxShadow: 'none' }}
                       >
-                        <ViewIcon />
+                        <QrCodeIcon />
                       </Button>
                     </ButtonGroup>
                   </InputRightAddon>
@@ -332,7 +342,7 @@ function App() {
                           onClick={() => handleShowQR(invoice, 'Invoice for 10 sats')}
                           _focus={{ boxShadow: 'none' }}
                         >
-                          <ViewIcon />
+                          <QrCodeIcon />
                         </Button>
                       </ButtonGroup>
                     </InputRightAddon>
