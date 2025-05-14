@@ -13,10 +13,10 @@
   "dependencies": {
     "@chakra-ui/icons": "^2.2.4",
     "@chakra-ui/react": "^2.8.2",
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
     "@getalby/sdk": "^5.0.0",
-    "framer-motion": "^10.18.0",
+    "framer-motion": "^6.5.1",
     "nwc-enclaved-utils": "^2.0.7",
     "qrcode.react": "^4.2.0",
     "react": "^18.2.0",
@@ -33,6 +33,9 @@
     "globals": "^16.0.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.30.1",
-    "vite": "^6.3.5"
+    "vite": "^5.1.6"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
