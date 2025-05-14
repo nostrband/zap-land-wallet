@@ -40,7 +40,6 @@ function App() {
   const [isLoadingBalance, setIsLoadingBalance] = useState(false)
   const [invoice, setInvoice] = useState('')
   const [paymentHash, setPaymentHash] = useState('')
-  const [isGeneratingInvoice, setIsGeneratingInvoice] = useState(false)
   const [isDev, setIsDev] = useState(false)
   const toast = useToast()
 
@@ -127,7 +126,6 @@ function App() {
 
   const generateInvoice = async (connectionString: string) => {
     try {
-      setIsGeneratingInvoice(true)
       const client = new nwc.NWCClient({ nostrWalletConnectUrl: connectionString })
       const response = await client.makeInvoice({ amount: 10000 }) // 10000 millisats = 10 sats
       setInvoice(response.invoice)
@@ -147,8 +145,6 @@ function App() {
         duration: 5000,
         isClosable: true,
       })
-    } finally {
-      setIsGeneratingInvoice(false)
     }
   }
 
