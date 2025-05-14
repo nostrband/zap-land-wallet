@@ -375,7 +375,8 @@ function App() {
         </Modal>
 
         <Text fontSize="sm" color="gray.500" textAlign="center" mt={8} mb={4}>
-          Built on <a href="https://github.com/nostrband/nwc-enclaved/" target="_blank" rel="noopener noreferrer" style={{ color: '#805AD5', textDecoration: 'underline' }}>nwc-enclaved</a> wallet.
+        <a href="https://github.com/nostrband/zap-land-wallet/" target="_blank" rel="noopener noreferrer" style={{ color: '#805AD5', textDecoration: 'underline' }}>Open-source</a> example app built on <a href="https://github.com/nostrband/nwc-enclaved/" target="_blank" rel="noopener noreferrer" style={{ color: '#805AD5', textDecoration: 'underline' }}>nwc-enclaved</a> wallet.
+        
         </Text>
       </Container>
     </Center>
