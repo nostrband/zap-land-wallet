@@ -1,3 +1,7 @@
+# Zap.Land
+
+Example app built on [nwc-enclaved](https://github.com/nostrband/nwc-enclaved) wallet.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

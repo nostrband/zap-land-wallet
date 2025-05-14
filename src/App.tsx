@@ -350,7 +350,7 @@ function App() {
               </Text>
 
               <Text fontSize="sm" color="red.500" fontWeight="bold" textAlign="center" mt={4}>
-                Important: save your NWC string, otherwise you might lose access to your wallet.
+                Important: save your NWC string, it's the only way to access your wallet.
               </Text>
             </>
           )}
