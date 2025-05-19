@@ -17,7 +17,7 @@
     "@emotion/styled": "^11.11.0",
     "@getalby/sdk": "^5.0.0",
     "framer-motion": "^6.5.1",
-    "nwc-enclaved-utils": "^2.0.7",
+    "nwc-enclaved-utils": "^2.0.8",
     "qrcode.react": "^4.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
